@@ -14,5 +14,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 5000
 
 # Define the command to run the application
-CMD ["python", "22itl08.py"]
+CMD ["python", "22itl03.py"]
 Update this file to add the content
