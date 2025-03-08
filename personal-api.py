@@ -1,13 +1,3 @@
-from flask import Flask, request, jsonify
-import numpy as np
-from ml_model import load_model, train_and_save_model
-
-app = Flask(__name__)
-
-# Load trained model
-model = load_model()
-
-# ------------------- PERSONAL INFO ROUTES -------------------
 @app.route('/')
 def home():
     """Welcome message for the API"""
@@ -25,25 +15,3 @@ def get_register_number():
 def get_department():
     return jsonify({"department": "Information Technology"})  # Replace with your department
 
-# ------------------- ML MODEL ROUTES -------------------
-@app.route('/predict', methods=['POST'])
-def predict():
-    """Predict based on input features"""
-    try:
-        data = request.json
-        features = np.array(data["features"]).reshape(1, -1)
-        prediction = model.predict(features)
-        return jsonify({"prediction": int(prediction[0])})
-    except Exception as e:
-        return jsonify({"error": str(e)})
-
-@app.route('/train', methods=['GET'])
-def retrain():
-    """Retrain the model"""
-    train_and_save_model()
-    global model
-    model = load_model()
-    return jsonify({"message": "Model retrained successfully!"})
-
-if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=5000, debug=True)
