@@ -10,6 +10,8 @@
 ![{0F1F2472-DF00-4024-85E1-267CFA3D1EF9}](https://github.com/user-attachments/assets/eccda4eb-ccc4-4524-af37-52cac7ab42af)
 
 ## 4 Write Dockerfile for the python file `ml-model.py`. Create image and push to DockerHub `Reg-Number-ml-model(Example: 1214214-ml-model)`
+![{25D8892F-269D-404A-8C23-FB0E645161D9}](https://github.com/user-attachments/assets/e26a7893-ff58-4128-9220-60e00d5257ec)
+
 
 ## 4 Add your DockerHub username
 ![{C6EF8B04-275A-4D0A-BAF7-02AD1F083A0F}](https://github.com/user-attachments/assets/b96da104-c6ae-4b4a-9c3f-821c0ac6abce)
